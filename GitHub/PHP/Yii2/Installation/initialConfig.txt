@@ -1,0 +1,121 @@
+**********************
+*                    *
+*      1. LÉPÉS      *
+*                    *
+**********************
+      .htaccess
+======================
+
+
+A főkönyvtárba (root könyvtárba, ez FosBeans-ben például Source Files alatt van) egy .htaccess fájl elhelyezése, ezzel a tartalommal:
+
+Options FollowSymLinks
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # the main rewrite rule for the frontend application
+    RewriteCond %{REQUEST_URI} !^/(backend/web|admin)
+    RewriteRule !^frontend/web /frontend/web%{REQUEST_URI} [L]
+
+    # redirect to the page without a trailing slash (uncomment if necessary)
+    #RewriteCond %{REQUEST_URI} ^/admin/$
+    #RewriteRule ^(admin)/ /$1 [L,R=301]
+    # the main rewrite rule for the backend application
+    RewriteCond %{REQUEST_URI} ^/admin
+    RewriteRule ^admin(.*) /backend/web/$1 [L]
+
+    # if a directory or a file of the frontend application exists, use the request directly
+    RewriteCond %{REQUEST_URI} ^/frontend/web
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # otherwise forward the request to index.php
+    RewriteRule . /frontend/web/index.php [L]
+
+    # if a directory or a file of the backend application exists, use the request directly
+    RewriteCond %{REQUEST_URI} ^/backend/web
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # otherwise forward the request to index.php
+    RewriteRule . /backend/web/index.php [L]
+
+    RewriteCond %{REQUEST_URI} \.(htaccess|htpasswd|svn|git)
+    RewriteRule \.(htaccess|htpasswd|svn|git) - [F]
+</IfModule>
+
+**********************
+*                    *
+*      2. LÉPÉS      *
+*                    *
+**********************
+	     hosts
+======================
+
+A híres-neves hosts fájl megnyitása, mondjuk a Sublime Text 2-vel (subl parancs). A "/" az elején ne maradjon le.
+
+sudo subl /etc/hosts
+
+majd itt adjuk hozzá ezt a sort, mondjuk legfelülre:
+
+127.0.1.1	mappanev
+
+a "mappanev" az annak a könyvtárnak a neve, ami "www" könyvtárban van, tehát a weboldal mappájáról van szó most. Ez alapjáraton egy friss linux és apache telepítésnél
+természetesen a /var/www/ alatt van. Tehát mégegyszer, ha "mappanev" néven hoztuk létre a Yii projektet a "www" könyvárban, akkor az elérési útvonala a mappának a következő:
+
+/var/www/mappanev/
+
+**********************
+*                    *
+*      3. LÉPÉS      *
+*                    *
+**********************
+	  mappnev.conf
+======================
+
+Létre kell hozni egy .conf kiterjesztésű fájlt az /etc/apache2/sites-enabled/ mappa alatt. A tartalma ez legyen:
+
+<VirtualHost *:80>
+	ServerName mappanev
+	DocumentRoot /var/www/mappanev
+		<Directory /var/www/mappanev>
+			Allow from all
+			AllowOverride All
+			Order allow,deny
+		</Directory>
+</VirtualHost>
+
+Értelemszerűen itt ha az aktuális mappa neve a "www" könyvtár alatt nem "mappanev" hanem valami más, akkor - ahogy az előző lépéseknél is - a "mappnev" helyett
+azt a nevet kell megadni
+
+**********************
+*                    *
+*      4. LÉPÉS      *
+*                    *
+**********************
+	 apache restart
+======================
+
+Ezek után már csak egy dolog maradt, az apache szerver újraindítása:
+
+sudo systemctl restart apache2
+
+**********************
+*                    *
+*      ÖSSZEFOG.     *
+*                    *
+**********************
+	könyvtár strukt.
+======================
+
+Szóval a végső fázisban így néz ki a könyvtár struktúrája:
+
+-/var
+   -/www
+      -/mappanev
+          -/frontend
+          -/backend
+          -/common
+          -/console
+          -.htaccess
+          -/stb...

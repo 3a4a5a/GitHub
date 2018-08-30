@@ -1,0 +1,104 @@
+**********************
+*                    *
+*      1. LÉPÉS      *
+*                    *
+**********************
+components/Request.php
+======================
+
+Hozzunk létre egy mappát a Yii2 rendszerünk főkönyvtárában azzal a névvel, hogy "components". Szóval valahogy így fog kinézni:
+
+-/var
+	-/www
+		-/mappanev
+			-/backend
+			-/frontend
+			-/common
+			-/console
+			-/components    <---- Ez az
+
+Ebben a könyvtárban hozzunk létre egy "Request.php" fájlt, és illesszük bele ezt:
+
+namespace common\components;
+
+class Request extends \yii\web\Request {
+    public $web;
+    public $adminUrl;
+
+    public function getBaseUrl(){
+        return str_replace($this->web, "", parent::getBaseUrl()) . $this->adminUrl;
+    }
+
+    /*
+        If you don't have this function, the admin site will 404 if you leave off 
+        the trailing slash.
+
+        E.g.:
+
+        Wouldn't work:
+        site.com/admin
+
+        Would work:
+        site.com/admin/
+
+        Using this function, both will work.
+    */
+    public function resolvePathInfo(){
+        if($this->getUrl() === $this->adminUrl){
+            return "";
+        }else{
+            return parent::resolvePathInfo();
+        }
+    }
+}
+
+Ezt mentsük is, ezzel készek vagyunk.
+
+**********************
+*                    *
+*      2. LÉPÉS      *
+*                    *
+**********************
+Konfig. fájlok
+======================
+
+Most már csak 2 darab config fájlt kell szerkeszteni, és kész is. A backendben és a frontendben. Az első:
+
+backend/config/main.php
+
+Keressük meg a "components" részt. Valami ilyesmit kell keresni:
+
+'components' => [
+  
+  'bla' =>  'bla bla'
+
+]
+
+Figyelem: itt kettő dolgot kell beilleszteni, de lehet, hogy ezek már ott vannak (csak az egyik lesz ott valószínűleg,
+mégpedig az urlManager). Egyszerűen kitöröljük azt, ami már ott van, vagy rámásolunk:
+
+'request'=>[
+    'class' => 'common\components\Request',
+    'web'=> '/backend/web',
+    'adminUrl' => '/admin'
+],
+'urlManager' => [
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+],
+
+Következő szerkesztendő config fájl:
+
+frontend/config/main.php
+
+Itt ugyanezt eljátszuk, megint felül kell írni ugyanezt a két dolgot, viszont itt az érték más, úgyhogy ne az előzőt másold be.
+Vagy tedd azt, csak írd át a "backend"-et "frontend"-re. De inkább csak másold ki ezt, biztos ami biztos.
+
+'request'=>[
+    'class' => 'common\components\Request',
+    'web'=> '/frontend/web'
+],
+'urlManager' => [
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+],
