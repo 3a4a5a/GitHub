@@ -1,0 +1,9 @@
+Changing the controllers view path (will search inside this folder automatically):
+---------------------
+
+    public function getViewPath()
+    {
+        return Yii::getAlias('@common/modules/xxxxxx/views');
+    }
+
+====================================================================================
