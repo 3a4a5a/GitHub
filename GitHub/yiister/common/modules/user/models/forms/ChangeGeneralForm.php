@@ -1,44 +1,27 @@
 <?php
 namespace common\modules\user\models\forms;
-
 use Yii;
 use yii\base\Model;
 use common\modules\user\models\User;
-
 /**
  * Login form
  */
-class EditProfileInfoForm extends Model
+class ChangeGeneralForm extends Model
 {
-    // Form fields
-    public $display_name;
     public $username;
-    public $email;
-    public $new_email;
-    public $password;
-
+    public $name;
+    public $first_name;
+    public $last_name;
+    
     // Objects
     public $_user = null;
-
+    
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            // Display name
-            ['display_name', 'unique',
-                'targetClass' => User::class,
-                'when'  => function ($model) {
-                    return Yii::$app->user->identity->display_name != $model->display_name;
-                }
-            ],
-            ['display_name', 'required'],
-            ['display_name', 'string',
-                'min'  => 3,
-                'max'  => 24,
-            ],
-            
             // Username
             ['username', 'unique',
                 'targetClass' => User::class,
@@ -49,13 +32,18 @@ class EditProfileInfoForm extends Model
             ['username', 'required'],
             ['username', 'string',
                 'min'  => 3,
-                'max'  => 24,
+                'max'  => 64,
+            ],
+                 
+            ['name', 'string',
+                'min'  => 3,
+                'max'  => 64,
             ],
                     
-            ['new_email', 'email'],
+            ['first_name', 'string'],
+            ['last_name', 'string'],
         ];
     }
-
     public function save()
     {
         if ($this->adjustUser()) {
@@ -79,8 +67,18 @@ class EditProfileInfoForm extends Model
             $adjusted = true;
         }
         
-        if ($this->display_name != Yii::$app->user->identity->display_name) {
-            $this->getUser()->display_name = $this->display_name;
+        if ($this->name != Yii::$app->user->identity->name) {
+            $this->getUser()->name = $this->name;
+            $adjusted = true;
+        }
+        
+        if ($this->first_name != Yii::$app->user->identity->first_name) {
+            $this->getUser()->first_name = $this->first_name;
+            $adjusted = true;
+        }
+        
+        if ($this->last_name != Yii::$app->user->identity->last_name) {
+            $this->getUser()->last_name = $this->last_name;
             $adjusted = true;
         }
         

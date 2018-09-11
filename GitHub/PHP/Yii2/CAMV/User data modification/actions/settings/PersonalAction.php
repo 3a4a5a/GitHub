@@ -9,7 +9,7 @@ use common\modules\comment\models\Comment;
 use common\modules\post\models\forms\PostComment;
 use common\modules\user\models\User;
 use common\modules\project\models\Project;
-use common\modules\user\models\forms\EditProfileInfoForm;
+use common\modules\user\models\forms\PersonalForm;
 use Yii;
 use yii\base\Action;
 use yii\data\ActiveDataProvider;
@@ -20,7 +20,7 @@ class PersonalAction extends Action
 {
     public function run()
     {
-        $model = new EditProfileInfoForm();
+        $model = new PersonalForm();
         
         // Form validation with AJAX
         if (Yii::$app->request->isAjax) {
