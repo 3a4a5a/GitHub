@@ -1,0 +1,21 @@
+div#rightPanel div.posts {
+    margin-bottom: 45px;
+}
+
+div#rightPanel h4 {
+    color: #556a7f;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div#rightPanel .truncate { 
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div#rightPanel .itt { 
+  color: #dc8e7f;
+}

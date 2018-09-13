@@ -1,0 +1,23 @@
+li span {
+    color: #777;
+}
+
+li span:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.post-tools {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 50px;
+}
+
+.list-title {
+    color: #fff;
+    background-color: #216CB7;
+}
+
+.glyphicon-tasks {
+    color: #fff;
+}

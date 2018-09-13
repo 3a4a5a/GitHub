@@ -1,0 +1,7 @@
+.recentComments .recentComment {
+    width : 200px;
+    overflow:hidden;
+    display:inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

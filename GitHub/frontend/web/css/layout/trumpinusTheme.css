@@ -1,0 +1,50 @@
+.trumpinusTitle {
+    margin-top: -136px;
+    margin-bottom: 70px;
+    font-weight: bolder;
+    color: #67727C;
+}
+
+.trumpButton, .trumpText {
+    padding: 0.6em 2em;
+    color: #FFF;
+    background: #556a7f;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.trumpButton2 {
+    padding: 0.6em 2em;
+    color: #556a7f;
+    background: #eee;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    border: 2px solid #8E939E;
+}
+
+#usernameUnderLogo {
+    color: #ADB9C9;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+#tabContainer .active  {
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+#tabContainer .tab-content {
+    min-height: 550px;
+}
+

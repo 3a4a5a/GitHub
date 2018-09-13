@@ -1,0 +1,23 @@
+.labelListElement {
+    cursor: default;
+}
+
+.labelListElement label {
+    cursor: pointer;
+}
+
+.labelListElement input {
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.labelListElement {
+    margin-top: 18px;
+}
+
+.labelListElement:hover {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
