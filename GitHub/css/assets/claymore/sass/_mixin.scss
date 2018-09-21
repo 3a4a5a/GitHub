@@ -1,0 +1,106 @@
+/**
+* EXTRA SMALL MÉRET
+*/
+
+@mixin screen-xs {
+    @media (min-width: #{$screen-xs-min}) and (max-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+@mixin screen-xs-up {
+    @media (min-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+@mixin screen-xs-down {
+    @media (max-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+
+/**
+* MOBILE MÉRET
+*/
+
+@mixin screen-sm {
+    @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+@mixin screen-sm-up {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+@mixin screen-sm-down {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+/**
+* TABLET MÉRET
+*/
+
+@mixin screen-md {
+    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+@mixin screen-md-up {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+@mixin screen-md-down {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+/**
+* NAGY MÉRET
+*/
+
+@mixin screen-lg {
+    @media (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+}
+@mixin screen-lg-up {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+@mixin screen-lg-down {
+    @media (max-width: #{$screen-lg-max}) {
+        @content;
+    }
+}
+
+@mixin space-margin($type,$px){
+    @if $type == top {
+        margin-top:$px !important;
+    } @else if $type == right {
+        margin-right:$px;
+    }
+    @else if $type == bottom {
+        margin-bottom:$px;
+    }
+    @else {
+        margin-left:$px;
+    }
+}
+@mixin space-padding($type,$px){
+    @if $type == top {
+        padding-top:$px;
+    } @else if $type == right {
+        padding-right:$px;
+    }
+    @else if $type == bottom {
+        padding-bottom:$px;
+    }
+    @else {
+        padding-left:$px;
+    }
+}

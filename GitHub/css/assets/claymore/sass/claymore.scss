@@ -1,0 +1,36 @@
+@import "variables.scss";
+@import "_mixin.scss";
+//@import "_helpers.scss";
+
+body {
+    background-color: $backgroundColor;
+    font-family: 'Open Sans';
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Navbar
+@import "blocks/_nav.scss";
+
+// Miner
+@import "blocks/_miner.scss";
+
+// Started
+@import "blocks/_started.scss";
+
+// Ethereum
+@import "blocks/_ethereum.scss";
+
+// Latest postt
+@import "blocks/_latestPosts.scss";
+
+// Footer
+@import "blocks/_footer.scss";
+
+@import "posts.scss";
+
+@import "privacyPolicy.scss";

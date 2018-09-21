@@ -1,0 +1,94 @@
+.navbar {
+    min-height: 74px;
+    margin-bottom: 100px;
+    background-color: $navBg;
+    -webkit-border-image: -webkit-linear-gradient(
+        right,
+        #4DD0E1 1%,
+        #5135D5 100%
+        ) 0 0 100% 0/0 0 2px 0 stretch;
+    -moz-border-image: -moz-linear-gradient(
+        right,
+        #4DD0E1 1%,
+        #5135D5 100%
+        ) 0 0 100% 0/0 0 2px 0 stretch;
+    -o-border-image: -o-linear-gradient(
+        right,
+        #4DD0E1 1%,
+        #5135D5 100%
+        ) 0 0 100% 0/0 0 2px 0 stretch;
+    border-image: linear-gradient(
+        to right,
+        #4DD0E1 1%,
+        #5135D5 100%
+        ) 0 0 100% 0/0 0 2px 0 stretch;
+    
+    
+    img.logo {
+        width: 170px;
+        min-height: 30px;
+        margin-top: 6px;
+    }
+    
+    li a {
+        min-height: 72px;
+        padding-top: 26px;
+        color: #262626 !important;
+        font-weight: bold;
+        
+        &:hover {
+            background-color: #ddd !important;
+        }
+    }
+    
+    li.active a {
+        font-weight: normal;
+        background-color: #4F6DD9 !important;
+        color: #fff !important;
+    }
+
+    .navbar-toggle {
+        background-color: #252525;
+    }
+
+    .navbar-button {
+        margin-top: 11px;
+    }
+    
+    input {
+        height: 50px;
+        width: 250px;
+        margin-top: 11px;
+        padding-left: 14px;
+        float: left;
+        background-color: #EAEAEA;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        
+        @include screen-sm {
+            width: 150px;
+        }
+        
+        @include screen-xs {
+            margin-left: 10px;
+        }
+    }
+    
+    button.search-button {
+        height: 50px;
+        float: left;
+        margin-top: 11px;
+        padding-left: 14px;
+        padding-right: 15px;
+        display: block;
+        background-color: #EAEAEA;
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}

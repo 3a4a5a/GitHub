@@ -1,0 +1,128 @@
+section.miner {
+    min-height: 400px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 25px 38px;
+    background-color: #484E5F;
+    box-shadow: 0 5px 10px #aaa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+    @include screen-xs-down {
+        padding: 18px 30px;
+    }
+    
+    h2 {
+        color: #4DD0E1;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    h1 {
+        margin-top: 18px;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 300;
+        
+        @include screen-xs-down {
+            font-size: 18px;
+        }
+    }
+    
+    ul {
+        margin-top: 36px;
+        line-height: 35px;
+        color: #fff;
+        
+        @include screen-xs-down {
+            font-size: 13px;
+        }
+        
+        .glyphicon {
+            margin-right: 16px;
+            color: #4DD0E1;
+            font-size: 10px;
+        }
+    }
+    
+    button {
+        margin-top: 50px;
+        padding: 15px 60px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        font-weight: bold;
+        
+        @include screen-xs-down {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        
+        span {
+            margin-top: 1px;
+            margin-right: 10px;
+            float: left;
+            display: block;
+            font-size: 16px;
+        }
+    }
+    
+    .fa {
+        @include screen-xs-down {
+            display: none;
+        }
+    }
+    
+    button.download {
+        background: #fff;
+        border: none;
+        color: #383838;
+        border: 3px solid #fff;
+        
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        
+        &:hover {
+            background: #bbb;
+            color: #000;
+        }
+    }
+    
+    button.info {
+        margin-left: 30px;
+        background: none;
+        border: 3px solid #fff;
+        color: #fff;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        
+        &:hover {
+            background-color: #fff;
+            color: #333;
+        }
+        
+        @include screen-xs-down {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+    
+    img {
+        width: 64px;
+        height: 64px;
+        margin-top: 24px;
+        float: right;
+        
+        @include screen-xs-down{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

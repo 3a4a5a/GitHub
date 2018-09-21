@@ -1,0 +1,317 @@
+@import "variables.scss";
+
+.no-padding{
+    padding:0px !important;
+}
+.padding-5{
+    padding:5px !important;
+}
+.mt-0 {@include space-margin(top,0px)}
+.mt-5 {@include space-margin(top,5px)}
+.mt-10 {@include space-margin(top,10px)}
+.mt-15 {@include space-margin(top,15px)}
+.mt-18 {@include space-margin(top,18px)}
+.mt-20 {@include space-margin(top,20px)}
+.mt-30 {@include space-margin(top,30px)}
+.mt-40 {@include space-margin(top,40px)}
+.mt-50 {@include space-margin(top,50px)}
+.mt-60 {@include space-margin(top,60px)}
+.mt-70 {@include space-margin(top,70px)}
+.mt-80 {@include space-margin(top,80px)}
+.mt-90 {@include space-margin(top,90px)}
+.mt-100 {@include space-margin(top,100px)}
+.mt-110 {@include space-margin(top,110px)}
+
+.mr-0 {@include space-margin(right,0px)}
+.mr-5 {@include space-margin(right,5px)}
+.mr-10 {@include space-margin(right,10px)}
+.mr-15 {@include space-margin(right,15px)}
+.mr-18 {@include space-margin(right,18px)}
+.mr-20 {@include space-margin(right,20px)}
+.mr-30 {@include space-margin(right,30px)}
+.mr-40 {@include space-margin(right,40px)}
+.mr-50 {@include space-margin(right,50px)}
+.mr-60 {@include space-margin(right,60px)}
+.mr-70 {@include space-margin(right,70px)}
+.mr-80 {@include space-margin(right,80px)}
+.mr-90 {@include space-margin(right,90px)}
+.mr-100 {@include space-margin(right,100px)}
+.mr-110 {@include space-margin(right,110px)}
+
+.mb-0 {@include space-margin(bottom,0px)}
+.mb-5 {@include space-margin(bottom,5px)}
+.mb-10 {@include space-margin(bottom,10px)}
+.mb-15 {@include space-margin(bottom,15px)}
+.mb-20 {@include space-margin(bottom,20px)}
+.mb-25 {@include space-margin(bottom,25px)}
+.mb-30 {@include space-margin(bottom,30px)}
+.mb-40 {@include space-margin(bottom,40px)}
+.mb-50 {@include space-margin(bottom,50px)}
+.mb-60 {@include space-margin(bottom,60px)}
+.mb-70 {@include space-margin(bottom,70px)}
+.mb-80 {@include space-margin(bottom,80px)}
+.mb-90 {@include space-margin(bottom,90px)}
+.mb-100 {@include space-margin(bottom,100px)}
+
+.ml-0 {@include space-margin(left,0px)}
+.ml-5 {@include space-margin(left,5px)}
+.ml-10 {@include space-margin(left,10px)}
+.ml-15 {@include space-margin(left,15px)}
+.ml-18 {@include space-margin(left,18px)}
+.ml-20 {@include space-margin(left,20px)}
+.ml-30 {@include space-margin(left,30px)}
+.ml-40 {@include space-margin(left,40px)}
+.ml-50 {@include space-margin(left,50px)}
+.ml-60 {@include space-margin(left,60px)}
+.ml-70 {@include space-margin(left,70px)}
+.ml-80 {@include space-margin(left,80px)}
+.ml-90 {@include space-margin(left,90px)}
+.ml-100 {@include space-margin(left,100px)}
+.ml-110 {@include space-margin(left,110px)}
+
+.pt-0 {@include space-padding(top,0px)}
+.pt-5 {@include space-padding(top,5px)}
+.pt-10 {@include space-padding(top,10px)}
+.pt-15 {@include space-padding(top,15px)}
+.pt-18 {@include space-padding(top,18px)}
+.pt-20 {@include space-padding(top,20px)}
+.pt-30 {@include space-padding(top,30px)}
+.pt-40 {@include space-padding(top,40px)}
+.pt-50 {@include space-padding(top,50px)}
+.pt-60 {@include space-padding(top,60px)}
+.pt-70 {@include space-padding(top,70px)}
+.pt-80 {@include space-padding(top,80px)}
+.pt-90 {@include space-padding(top,90px)}
+.pt-100 {@include space-padding(top,100px)}
+.pt-110 {@include space-padding(top,110px)}
+
+.pr-0 {@include space-padding(right,0px)}
+.pr-5 {@include space-padding(right,5px)}
+.pr-10 {@include space-padding(right,10px)}
+.pr-15 {@include space-padding(right,15px)}
+.pr-18 {@include space-padding(right,18px)}
+.pr-20 {@include space-padding(right,20px)}
+.pr-30 {@include space-padding(right,30px)}
+.pr-40 {@include space-padding(right,40px)}
+.pr-50 {@include space-padding(right,50px)}
+.pr-60 {@include space-padding(right,60px)}
+.pr-70 {@include space-padding(right,70px)}
+.pr-80 {@include space-padding(right,80px)}
+.pr-90 {@include space-padding(right,90px)}
+.pr-100 {@include space-padding(right,100px)}
+.pr-110 {@include space-padding(right,110px)}
+
+.pb-0 {@include space-padding(bottom,0px)}
+.pb-5 {@include space-padding(bottom,5px)}
+.pb-10 {@include space-padding(bottom,10px)}
+.pb-20 {@include space-padding(bottom,20px)}
+.pb-30 {@include space-padding(bottom,30px)}
+.pb-40 {@include space-padding(bottom,40px)}
+.pb-50 {@include space-padding(bottom,50px)}
+.pb-60 {@include space-padding(bottom,60px)}
+.pb-70 {@include space-padding(bottom,70px)}
+.pb-80 {@include space-padding(bottom,80px)}
+.pb-90 {@include space-padding(bottom,90px)}
+.pb-100 {@include space-padding(bottom,100px)}
+
+.pl-0 {@include space-padding(left,0px)}
+.pl-5 {@include space-padding(left,5px)}
+.pl-10 {@include space-padding(left,10px)}
+.pl-15 {@include space-padding(left,15px)}
+.pl-18 {@include space-padding(left,18px)}
+.pl-20 {@include space-padding(left,20px)}
+.pl-30 {@include space-padding(left,30px)}
+.pl-40 {@include space-padding(left,40px)}
+.pl-50 {@include space-padding(left,50px)}
+.pl-60 {@include space-padding(left,60px)}
+.pl-70 {@include space-padding(left,70px)}
+.pl-80 {@include space-padding(left,80px)}
+.pl-90 {@include space-padding(left,90px)}
+.pl-100 {@include space-padding(left,100px)}
+.pl-110 {@include space-padding(left,110px)}
+
+.input-100 {
+    width: 100% !important;
+}
+
+@media (max-width: 767px) {
+    .hidden-xs-up,
+    .hidden-lg-down,
+    .hidden-md-down,
+    .hidden-sm-down {
+        display: none !important;
+    }
+
+    .text-right-xs-up,
+    .text-right-lg-down,
+    .text-right-md-down,
+    .text-right-sm-down {
+        text-align: right !important;
+    }
+
+    .text-left-xs-up,
+    .text-left-lg-down,
+    .text-left-md-down,
+    .text-left-sm-down {
+        text-align: left !important;
+    }
+
+    .input-100-xs,
+    .input-100-xs-up,
+    .input-100-lg-down,
+    .input-100-md-down,
+    .input-100-sm-down {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-lg-down,
+    .hidden-md-down,
+    .hidden-sm-down {
+        display: none !important;
+    }
+
+    .input-100-xs-up,
+    .input-100-sm-up,
+    .input-100-lg-down,
+    .input-100-md-down,
+    .input-100-sm-down {
+        width: 100% !important;
+    }
+
+    .text-right-xs-up,
+    .text-right-sm-up,
+    .text-right-lg-down,
+    .text-right-md-down,
+    .text-right-sm-down {
+        text-align: right !important;
+    }
+
+    .text-left-xs-up,
+    .text-left-sm-up,
+    .text-left-lg-down,
+    .text-left-md-down,
+    .text-left-sm-down {
+        text-align: left !important;
+    }
+
+    .menubar-unfold .dashboard-head-container {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-md-up,
+    .hidden-lg-down,
+    .hidden-md-down {
+        display: none !important;
+    }
+
+    .input-100-xs-up,
+    .input-100-sm-up,
+    .input-100-md-up,
+    .input-100-lg-down,
+    .input-100-md-down {
+        width: 100% !important;
+    }
+
+    .text-right-xs-up,
+    .text-right-sm-up,
+    .text-right-md-up,
+    .text-right-lg-down,
+    .text-right-sm-down {
+        text-align: right !important;
+    }
+
+    .text-left-xs-up,
+    .text-left-sm-up,
+    .text-left-md-up,
+    .text-left-lg-down,
+    .text-left-sm-down {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-md-up,
+    .hidden-lg-down {
+        display: none !important;
+    }
+
+    .input-100-xs-up,
+    .input-100-sm-up,
+    .input-100-md-up,
+    .input-100-lg-down {
+        width: 100% !important;
+    }
+
+    .text-right-xs-up,
+    .text-right-sm-up,
+    .text-right-md-up,
+    .text-right-lg-down {
+        text-align: right !important;
+    }
+
+    .text-left-xs-up,
+    .text-left-sm-up,
+    .text-left-md-up,
+    .text-left-lg-down {
+        text-align: left !important;
+    }
+}
+
+@include screen-xs{
+    /* Force table to not be like tables anymore */
+    #no-more-tables table,
+    #no-more-tables thead,
+    #no-more-tables tbody,
+    #no-more-tables th,
+    #no-more-tables td,
+    #no-more-tables tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #no-more-tables tr { border: 1px solid #ccc; }
+
+    #no-more-tables td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align:left;
+    }
+
+    #no-more-tables td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+    }
+
+    /*
+    Label the data
+    */
+    #no-more-tables td:before { content: attr(data-title);line-height: 46px;}
+}

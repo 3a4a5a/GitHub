@@ -1,0 +1,112 @@
+section.ethereum {
+    min-height: 185px;
+    margin-bottom: 34px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 9px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    
+    @include screen-lg-down {
+        margin-top: 30px;
+    }
+    
+    .ethereum-title {
+        @include screen-lg-down {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+    
+    img {
+        margin-left: 32px;
+        
+        @include screen-lg-down {
+            margin-left: 0;
+        }
+    }
+    
+    h3 {
+        margin: 0;
+        margin-bottom: 12px;
+        margin-top: 5px;
+        color: #3C74DD;
+        font-size: 18px;
+    }
+    
+    div.category {
+        width: 137%;
+        margin-left: -15px;
+        margin-top: 8px;
+        padding: 14px 10px 14px 0;
+        margin-right: 0;
+        border: 1px solid #ddd;
+        
+        @include screen-lg-down {
+            margin: 0;
+            padding: 0;
+            border: none;
+            display: inline;
+            text-align: center;
+        }
+    }
+    
+    div.category-middle {
+        border-left: none;
+        border-right: none;
+    }
+
+    span.currency {
+        display: block;
+        font-weight: bold;
+        text-align: left;
+        
+        @include screen-lg-down {
+            text-align: center;
+        }
+        
+        font {
+            color: green;
+        }
+    }
+    
+    span.category-title {
+        text-transform: uppercase;
+        font-size: 11px;
+        
+        @include screen-lg-down {
+            margin-top: 12px;
+            text-align: center;
+        }
+    }
+    
+    span.category-value {
+        margin-top: 14px;
+        display: block;
+        font-weight: bold;
+        color: #444;
+        
+        @include screen-lg-down {
+            margin-top: 5px;
+        }
+    }
+    
+    span {
+        text-align: center;
+        display: block;
+    }
+    
+    div.powered {
+        padding-top: 95px;
+        font-size: 10px;
+        color: #5D98E5;
+        font-weight: bold;
+        font-style: italic;
+        
+        @include screen-lg-down {
+            padding-top: 20px;
+            text-align: center;
+        }
+    }
+}

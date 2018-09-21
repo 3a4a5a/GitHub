@@ -1,0 +1,186 @@
+h1,h2,h3,h4,h5,h6,h7,form,ul,li {
+    margin: 0; padding: 0;
+}
+
+section.posts {
+    min-height: 700px;
+    margin-bottom: 100px;
+    padding: 50px 40px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #ddd;
+
+    h1 {
+        margin-bottom: 26px;
+        color: #262626;
+        font-size: 24px;
+    }
+    
+    form {
+        input[type="text"], select {
+            height: 50px;
+            margin-top: 11px;
+            margin-right: 10px;
+            padding-left: 14px;
+            padding-right: 14px;
+            background-color: #EAEAEA;
+            border: none;
+            border-radius: 3px;
+            color: #969696;
+        }
+        
+        input[type="text"] {
+            width: 370px;
+            float: left;
+            
+            @include screen-xs-down {
+                width: 100%;
+            }
+        }
+        
+        .post-search {
+            float: left;
+        }
+        
+        select {
+            width: 140px;
+        }
+        
+        input[type="submit"] {
+            margin-top: 11px;
+            padding: 14.5px 40px;
+            border-radius: 2px;
+            background-color: #4DD0E1;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+    }
+    
+    form.filter-post {
+        select {
+            margin-top: 0;
+            height: 40px;
+        }
+    }
+    
+    hr {
+        margin: 20px 0;
+    }
+    
+    /*
+    * Post list part
+    */
+    
+    section.post-list {
+        .post {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 30px;
+            
+            .post-author {
+                float: left;
+            }
+            
+            .post-date {
+                float: left;
+                margin-left: 30px;
+                color: #969696;
+                font-style: italic;
+            }
+            
+            .post-text {
+                margin-top: 25px;
+                color: #969696;
+                line-height: 24px;
+            }
+            
+            .post-quote {
+                margin-top: 25px;
+                
+                .post-quote-header {
+                    .post-quote-header-label {
+                        color: #969696;
+                        float: left;
+                    }
+                    
+                    .post-quote-header-date {
+                        margin-left: 6px;
+                        float: left;
+                        color: #7079AD;
+                        font-weight: bold;
+                        font-style: italic;
+                        margin-bottom: 10px;
+                    }
+                }
+                
+                .post-quote-body {
+                    background-color: #EDFAFC;
+                    border: 1px solid #A6E7F0;
+                    border-radius: 4px;
+                    color: #969696;
+                    
+                    .post-quote-body-title {
+                        .post-quote-body-title-text {
+                            margin-bottom: 30px;
+                            padding-top: 20px;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            float: left;
+                        }
+
+                        .post-quote-body-title-quote {
+                            margin-right: 18px;
+                            margin-top: 5px;
+                            float: right;
+                            color: #ccc;
+                            font-size: 38px;
+                        }
+                    }
+                    
+                    .post-quote-body-content {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #A6E7F0;
+                    }
+                    
+                    .post-quote-body-footer {
+                        padding: 5px 20px;
+                        text-align: center;
+                        color: #5A64A1;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        
+        .pagination {
+            .buttons {
+                button {
+                    margin-right: 12px;
+                    padding: 12px 18px;
+                    background: none;
+                    color: #969696;
+                    border: 1px solid #ddd;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    
+                    &:hover:not(button.dotdotdot) {
+                        border: 1px solid #A6E7F0;
+                        background-color: #A6E7F0;
+                        color: #fff;
+                    }
+                    
+                    &:nth-child(2) {
+                        border: 1px solid #4DD0E1;
+                    }
+                }
+                
+                button.dotdotdot {
+                    border: none;
+                }
+            }
+        }
+    }
+}

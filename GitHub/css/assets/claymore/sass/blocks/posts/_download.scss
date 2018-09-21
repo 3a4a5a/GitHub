@@ -1,0 +1,116 @@
+section.download {
+    min-height: 520px;
+    margin: 0 10px;
+    padding: 0 40px;
+    padding-bottom: 20px;
+    border-radius: 7px;
+    background-color: #373D4B;
+    
+    .download-label {
+        width: 120px;
+        margin-right: -40px;
+        margin-bottom: 30px;
+        padding: 10px 12px;
+        float: right;
+        text-align: right;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        background-color: #5135D5;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
+    }
+    
+    .download-title {
+        h3 {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 24px;
+        }
+    }
+    
+    .download-subtitle {
+        h5 {
+            margin-top: 7px;
+            margin-bottom: 40px;
+            color: #4DD0E1;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    
+    .download-list {
+        margin-bottom: 22px;
+        color: #fff;
+        line-height: 21px;
+        
+        span.glyphicon {
+            margin-right: 16px;
+            color: #4DD0E1;
+            font-size: 10px;
+        }
+        
+        ul {
+            li {
+                margin-top: 20px;
+                
+                &:before {
+                    content: "\e250";
+                    font-family: 'Glyphicons Halflings';
+                    font-size: 9px;
+                    float: left;
+                    margin-left: -17px;
+                    color: #4DD0E1;
+                }
+            }
+        }
+    }
+    
+    .buttons {
+        @include screen-md {
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+        @include screen-sm-down {
+            width: 70%;
+            margin: 10px auto;
+            padding-top: 30px;
+        }
+        
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px 0;
+            border: none;
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            
+            
+        }
+        
+        .download-dl {
+            button {
+                color: #fff;
+                background-color: #4DD0E1;
+                
+                &:hover {
+                    background-color: #74D5E0;
+                }
+            }
+        }
+        
+        .download-info {
+            button {
+                color: #262626;
+                background-color: #FFFFFF;
+                
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+}

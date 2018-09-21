@@ -1,0 +1,91 @@
+footer {
+    min-height: 284px;
+    background-color: #fff;
+    
+    .content {
+        padding: 82px 40px;
+        
+        @include screen-sm {
+                padding-top: 20px;
+            }
+        
+        img.footer-logo {
+            width: 225px;
+            height: 40px;
+            margin-top: 40px;
+            
+            @include screen-sm {
+                margin-top: 20px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            @include screen-xs-down {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+        }
+        
+        ul {
+            padding: 0;
+            list-style: none;
+            
+            li {
+                color: #969696;
+                font-size: 14px;
+                line-height: 35px;
+            }
+        }
+        
+        .footer-navigation {
+            margin-left: 82px;
+            
+            @include screen-md-down {
+                margin-left: 105px;
+            }
+            
+            @include screen-sm {
+                margin-left: 95px;
+            }
+            
+            @include screen-xs-down {
+                margin-left: 25px;
+            }
+        }
+        
+        .footer-privacy {
+            margin-left: 32px;
+            
+            @include screen-md-down {
+                margin-left: 40px;
+            }
+            
+            @include screen-sm-down {
+                margin-left: 35px;
+            }
+        }
+        
+        .footer-social {
+            i {
+                color: #969696;
+                    
+                &:hover {
+                    cursor: pointer;
+                    color: #4DD0E1;
+                }
+            }
+            
+            
+        }
+        
+        .footer-socialtext {
+            margin-bottom: 15px;
+            display: block;
+            font-weight: bold;
+            
+            @include screen-xs-down {
+                margin-top: 40px;
+            }
+        }
+    }
+}
